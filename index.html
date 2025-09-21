@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmaven</title>
+    <!-- Conexión a tu CSS -->
+    <link rel="stylesheet" href="css-assets/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Farmaven</h1>
+        <nav>
+            <a href="#productos">Productos</a>
+            <a href="#cotizador">Cotizador</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Productos -->
+        <section id="productos">
+            <h2>Nuestros Productos</h2>
+            <div class="producto">
+                <img src="img/vitaminaC.jpg" alt="Vitamina C">
+                <h3>Vitamina C</h3>
+                <p>Precio: S/30 <span class="descuento">-10% OFF</span></p>
+            </div>
+            <div class="producto">
+                <img src="img/jarabeTos.jpg" alt="Jarabe para la tos">
+                <h3>Jarabe para la Tos</h3>
+                <p>Precio: S/25 <span class="descuento">-10% OFF</span></p>
+            </div>
+            <div class="producto">
+                <img src="img/multivitaminico.jpg" alt="Multivitamínico">
+                <h3>Multivitamínico</h3>
+                <p>Precio: S/40 <span class="descuento">-15% OFF</span></p>
+            </div>
+        </section>
+
+        <!-- Cotizador -->
+        <section id="cotizador">
+            <h2>Cotizador de Servicios</h2>
+            <form id="cotizadorForm">
+                <label for="producto">Producto:</label>
+                <select id="producto" name="producto">
+                    <option value="30">Vitamina C</option>
+                    <option value="25">Jarabe para la Tos</option>
+                    <option value="40">Multivitamínico</option>
+                </select>
+
+                <label for="cantidad">Cantidad:</label>
+                <input type="number" id="cantidad" name="cantidad" min="1" required>
+
+                <button type="button" onclick="calcular()">Calcular</button>
+            </form>
+            <p id="resultado"></p>
+        </section>
+
+        <!-- Contacto -->
+        <section id="contacto">
+            <h2>Contáctanos</h2>
+            <form id="contactForm">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" required></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
+            <p id="agradecimiento" class="oculto">¡Gracias por contactarnos! Te responderemos pronto.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 FarmaVend - Cuida tu salud con nosotros</p>
+    </footer>
+
+    <!-- Script -->
+    <script>
+        // Cotizador
+        function calcular() {
+            const precio = parseFloat(document.getElementById("producto").value);
+            const cantidad = parseInt(document.getElementById("cantidad").value);
+            if (!cantidad || cantidad <= 0) {
+                document.getElementById("resultado").innerText = "Ingrese una cantidad válida.";
+                return;
+            }
+            const total = precio * cantidad;
+            document.getElementById("resultado").innerText = "Total estimado: S/" + total;
+        }
+
+        // Contacto
+        document.getElementById("contactForm").addEventListener("submit", function(e) {
+            e.preventDefault();
+            document.getElementById("agradecimiento").classList.remove("oculto");
+            this.reset();
+        });
+    </script>
+</body>
+</html>
