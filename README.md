@@ -11,5 +11,5 @@ Ofrecer una página sencilla, clara y atractiva que brinde información confiabl
 - *CSS3*  
 - *Bootstrap 5*  
 - *Font Awesome* (íconos)  
-## 👤 Autoras:
+## 👤 Autora:
 - Mikela Mora @mikelamoraa  
