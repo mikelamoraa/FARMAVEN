@@ -1,106 +1,344 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Farmaven</title>
-    <!-- Conexión a tu CSS -->
-    <link rel="stylesheet" href="css/assets/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Farmaven</title>
+<meta name="description" content="Farmaven - Medicamentos de calidad, promociones y atención confiable para tu salud.">
+<meta name="keywords" content="farmacia, medicamentos, salud, farmaven, promociones, antibióticos">
+<meta name="author" content="Farmaven">
+<link rel="icon" href="images/logo.png" type="image/png">
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+  <!-- Estilos -->
+  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
-    <header>
-        <h1>Farmaven</h1>
-        <nav>
-            <a href="#productos">Productos</a>
-            <a href="#cotizador">Cotizador</a>
-            <a href="#contacto">Contacto</a>
-        </nav>
-    </header>
+  <!-- HEADER -->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color:#0d3b66;">
+      <div class="container">
+        <!-- Logo -->
+        <a class="navbar-brand fw-bold text-white" href="#">
+          <img src="images/logo.png" alt="Farmaven Logo" width="40" height="40" class="me-2">
+          FARMAVEN
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link text-white" href="#">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="#productos">Productos</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="#promociones">Promociones</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="#cotizador">Cotizador</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="#contactForm">Contáctanos</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
 
-    <main>
-        <!-- Productos -->
-        <section id="productos">
-            <h2>Nuestros Productos</h2>
-            <div class="producto">
-                <img src="images/vitamina-c.jpg" alt="Vitamina C">
-                <h3>Vitamina C</h3>
-                <p>Precio: S/30 <span class="descuento">-10% OFF</span></p>
+  <!-- BANNER -->
+  <section class="banner text-center d-flex align-items-center" 
+  style="background: url('images/banner.jpg') center/cover no-repeat; height: 70vh;">
+    <div class="container">
+      <h1 class="display-4 fw-bold text-uppercase">TU SALUD NUESTRA PRIORIDAD</h1>
+      <p class="lead mt-3">En FARMAVEN trabajamos para cuidarte a ti y a tu familia.</p>
+      <p class="mt-3 fst-italic fs-4">✨ Cuidamos de ti para que vivas mejor ✨</p>
+    </div>
+  </section>
+  <!-- SECCIÓN DESTACADA -->
+   <section class="py-5 text-center" style="background-color:#0d3b66; color:white;">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <img src="images/seguridad.png" alt="Seguridad" width="70">
+        <h5 class="mt-2">Seguridad</h5>
+        <p>Productos certificados y confiables.</p>
+      </div>
+      <div class="col-md-4">
+        <img src="images/calidad.png" alt="Calidad" width="70">
+        <h5 class="mt-2">Calidad</h5>
+        <p>Solo lo mejor para tu salud.</p>
+      </div>
+      <div class="col-md-4">
+        <img src="images/entrega.png" alt="Entrega" width="70">
+        <h5 class="mt-2">Entrega rápida</h5>
+        <p>Recibe tus productos sin demoras.</p>
+      </div>
+    </div>
+  </div>
+</section>
+  <!-- PRODUCTOS -->
+<section class="py-5" id="productos">
+  <div class="container">
+    <h2 class="text-center section-title mb-4">Nuestros Productos 🛒</h2>
+    <div class="bg-light p-4 rounded shadow-sm mb-5 text-center">
+      <p class="mb-0">
+        Descubre nuestros productos más populares, diseñados para ofrecerte alivio y tranquilidad. 
+        Nos aseguramos de que cada producto que ofrecemos cumpla con los más altos estándares de calidad, 
+        para que puedas cuidar de tu salud con total confianza.
+      </p>
+    </div>
+    <div class="row g-4">
+      <!-- Amoxicilina -->
+      <div class="col-md-4">
+        <div class="card h-100 text-center shadow-sm">
+          <img src="images/amoxicilina.png" class="card-img-top" alt="Amoxicilina">
+          <div class="card-body">
+            <h5 class="card-title">Amoxicilina</h5>
+            <p class="card-text">Antibiótico de amplio espectro.</p>
+            <p class="fw-bold">S/25</p>
+            <a href="#" class="btn btn-primary">Comprar</a>
+          </div>
+        </div>
+      </div>
+      <!-- Azitromicina -->
+      <div class="col-md-4">
+        <div class="card h-100 text-center shadow-sm">
+          <img src="images/azitromicina.png" class="card-img-top" alt="Azitromicina">
+          <div class="card-body">
+            <h5 class="card-title">Azitromicina</h5>
+            <p class="card-text">Tratamiento para infecciones bacterianas.</p>
+            <p class="fw-bold">S/28</p>
+            <a href="#" class="btn btn-primary">Comprar</a>
+          </div>
+        </div>
+      </div>
+      <!-- Diclofenaco -->
+      <div class="col-md-4">
+        <div class="card h-100 text-center shadow-sm">
+          <img src="images/diclofenaco.png" class="card-img-top" alt="Diclofenaco">
+          <div class="card-body">
+            <h5 class="card-title">Diclofenaco</h5>
+            <p class="card-text">Antiinflamatorio y analgésico.</p>
+            <p class="fw-bold">S/18</p>
+            <a href="#" class="btn btn-primary">Comprar</a>
+          </div>
+        </div>
+      </div>
+      <!-- Ibuprofeno -->
+      <div class="col-md-4">
+        <div class="card h-100 text-center shadow-sm">
+          <img src="images/ibuprofeno.png" class="card-img-top" alt="Ibuprofeno">
+          <div class="card-body">
+            <h5 class="card-title">Ibuprofeno</h5>
+            <p class="card-text">Reduce dolor, fiebre e inflamación.</p>
+            <p class="fw-bold">S/12</p>
+            <a href="#" class="btn btn-primary">Comprar</a>
+          </div>
+        </div>
+      </div>
+      <!-- Paracetamol -->
+      <div class="col-md-4">
+        <div class="card h-100 text-center shadow-sm">
+          <img src="images/paracetamol.png" class="card-img-top" alt="Paracetamol">
+          <div class="card-body">
+            <h5 class="card-title">Paracetamol</h5>
+            <p class="card-text">Alivio rápido para el dolor y fiebre.</p>
+            <p class="fw-bold">S/10</p>
+            <a href="#" class="btn btn-primary">Comprar</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- PROMOCIONES -->
+  <section class="py-5" id="promociones">
+    <div class="container">
+      <h2 class="text-center mb-4">Promociones 💸 </h2>
+      <div class="row g-4">
+        <!-- Vitamina C -->
+        <div class="col-md-4">
+          <div class="card h-100 text-center shadow-sm">
+            <img src="images/PROMO1.png" class="card-img-top" alt="Vitamina C">
+            <div class="card-body">
+              <h5 class="card-title">Vitamina C</h5>
+              <p class="card-text">Refuerza tu sistema inmunológico.</p>
+              <p><span class="text-muted text-decoration-line-through">S/22</span> <span class="fw-bold">S/18</span></p>
+              <a href="#" class="btn btn-primary">Comprar</a>
             </div>
-            <div class="producto">
-                <img src="images/jarabe-tos.jpg" alt="Jarabe para la tos">
-                <h3>Jarabe para la Tos</h3>
-                <p>Precio: S/25 <span class="descuento">-10% OFF</span></p>
+          </div>
+        </div>
+        <!-- Jarabe para la tos -->
+        <div class="col-md-4">
+          <div class="card h-100 text-center shadow-sm">
+            <img src="images/PROMO2.png" class="card-img-top" alt="Jarabe para la tos">
+            <div class="card-body">
+              <h5 class="card-title">Jarabe para la tos</h5>
+              <p class="card-text">Alivio rápido para la tos seca o con flema.</p>
+              <p><span class="text-muted text-decoration-line-through">S/18</span> <span class="fw-bold">S/14</span></p>
+              <a href="#" class="btn btn-primary">Comprar</a>
             </div>
-            <div class="producto">
-                <img src="images/multivitaminico.jpg" alt="Multivitamínico">
-                <h3>Multivitamínico</h3>
-                <p>Precio: S/40 <span class="descuento">-15% OFF</span></p>
+          </div>
+        </div>
+        <!-- Multivitamínico -->
+        <div class="col-md-4">
+          <div class="card h-100 text-center shadow-sm">
+            <img src="images/PROMO3.png" class="card-img-top" alt="Multivitamínico">
+            <div class="card-body">
+              <h5 class="card-title">Multivitamínico</h5>
+              <p class="card-text">Complejo vitamínico para toda la familia.</p>
+              <p><span class="text-muted text-decoration-line-through">S/35</span> <span class="fw-bold">S/28</span></p>
+              <a href="#" class="btn btn-primary">Comprar</a>
             </div>
-        </section>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+<!-- NOSOTROS -->
+<section class="py-5 text-white" id="nosotros" style="background-color:#0d3b66;">
+  <div class="container">
+    <h2 class="text-center mb-4">Nosotros 👩‍💼🏢 </h2>
+    <div class="row align-items-center">
+      <!-- Foto -->
+      <div class="col-md-4 text-center">
+        <img src="images/mifoto.png" alt="Foto de nosotros" class="img-fluid rounded shadow-lg" style="max-height:300px;">
+      </div>
+      <!-- Texto -->
+      <div class="col-md-8">
+        <p class="lead">
+          En <strong>FARMAVEN</strong> trabajamos con dedicación para cuidar de ti y de tu familia.
+          Nuestro compromiso es ofrecer productos de calidad, confianza y accesibles para todos.
+        </p>
+        <h4 class="mt-4">Nuestros Valores 🌟</h4>
+        <ul>
+          <li><strong>Compromiso:</strong> Brindar atención y productos que garanticen tu bienestar.</li>
+          <li><strong>Calidad:</strong> Cada producto cumple con los más altos estándares.</li>
+          <li><strong>Cercanía:</strong> Estamos aquí para ayudarte y asesorarte.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+  <!-- COTIZADOR -->
+  <section class="py-5" id="cotizador">
+    <div class="container">
+      <h2 class="text-center mb-4">Cotizador 💲</h2>
+      <div class="bg-light p-4 rounded shadow-sm">
+        <form id="cotizadorForm">
+          <div class="row g-3">
+            <div class="col-md-6">
+              <label for="producto" class="form-label">Selecciona un producto</label>
+              <select class="form-select" id="producto" required>
+                <option value="">-- Elige --</option>
+                <option value="25">Amoxicilina - S/25</option>
+                <option value="28">Azitromicina - S/28</option>
+                <option value="18">Diclofenaco - S/18</option>
+                <option value="12">Ibuprofeno - S/12</option>
+                <option value="10">Paracetamol - S/10</option>
+              </select>
+            </div>
+            <div class="col-md-6">
+              <label for="cantidad" class="form-label">Cantidad</label>
+              <input type="number" id="cantidad" class="form-control" min="1" value="1" required>
+            </div>
+          </div>
+          <div class="text-center mt-4">
+            <button type="submit" class="btn btn-primary">Calcular</button>
+          </div>
+        </form>
+        <div id="resultadoCotizacion" class="mt-3 text-center fw-bold fs-5"></div>
+      </div>
+    </div>
+  </section>
 
-        <!-- Cotizador -->
-        <section id="cotizador">
-            <h2>Cotizador de Servicios</h2>
-            <form id="cotizadorForm">
-                <label for="producto">Producto:</label>
-                <select id="producto" name="producto">
-                    <option value="30">Vitamina C</option>
-                    <option value="25">Jarabe para la Tos</option>
-                    <option value="40">Multivitamínico</option>
-                </select>
+  <script>
+    document.getElementById("cotizadorForm").addEventListener("submit", function(e){
+      e.preventDefault();
+      let precio = parseFloat(document.getElementById("producto").value);
+      let cantidad = parseInt(document.getElementById("cantidad").value);
+      if(!isNaN(precio) && !isNaN(cantidad)){
+        let total = precio * cantidad;
+        document.getElementById("resultadoCotizacion").textContent = "Total a pagar: S/" + total;
+      }
+    });
+  </script>
+  <!-- CONTACTO -->
+  <section class="container my-5" id="contactForm">
+    <h2 class="text-center mb-4">Contáctanos 📱📧</h2>
+    <form class="p-4 border rounded bg-light shadow-sm">
+      <div class="mb-3">
+        <label for="name" class="form-label">Nombre</label>
+        <input type="text" class="form-control" id="name" required />
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Correo</label>
+        <input type="email" class="form-control" id="email" required />
+      </div>
+      <div class="mb-3">
+        <label for="message" class="form-label">Mensaje</label>
+        <textarea class="form-control" id="message" rows="4" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary w-100">Enviar</button>
+    </form>
 
-                <label for="cantidad">Cantidad:</label>
-                <input type="number" id="cantidad" name="cantidad" min="1" required>
+    <!-- Mensaje de éxito -->
+    <p id="mensaje-exito" class="mt-3 text-center fw-bold" style="display:none; color:green;">
+      🎉 ¡Tu mensaje fue enviado con éxito! Gracias por escribirnos, te responderemos pronto.
+    </p>
+  </section>
 
-                <button type="button" onclick="calcular()">Calcular</button>
-            </form>
-            <p id="resultado"></p>
-        </section>
+  <!-- REDES SOCIALES -->
+  <section class="py-5 text-center bg-light">
+    <div class="container">
+      <h2 class="section-title mb-4">Síguenos en redes sociales 🌐</h2>
+      <p class="mb-4">Mantente al día con nuestras promociones, consejos de salud y novedades.</p>
+      <div class="d-flex justify-content-center gap-4">
+        <a href="https://facebook.com/farmavensalud" target="_blank">
+          <img src="images/facebook.png" alt="Facebook" width="50">
+        </a>
+        <a href="https://instagram.com/farmavensalud" target="_blank">
+          <img src="images/instagram.png" alt="Instagram" width="50">
+        </a>
+        <a href="https://twitter.com/farmavensalud" target="_blank">
+          <img src="images/twitter.png" alt="Twitter" width="50">
+        </a>
+      </div>
+    </div>
+  </section>
 
-        <!-- Contacto -->
-        <section id="contacto">
-            <h2>Contáctanos</h2>
-            <form id="contactForm">
-                <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre" name="nombre" required>
+  <!-- FOOTER -->
+  <footer class="py-4 text-center text-white" style="background-color:#0d3b66;">
+    <div class="container">
+      <h6 class="mb-0">© 2025 FARMAVEN - Todos los derechos reservados</h6>
+    </div>
+  </footer>
 
-                <label for="email">Correo electrónico:</label>
-                <input type="email" id="email" name="email" required>
+  <!-- JS Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-                <label for="mensaje">Mensaje:</label>
-                <textarea id="mensaje" name="mensaje" required></textarea>
+  <!-- Scripts extra -->
+  <script>
+    // Capturar el formulario
+    const form = document.querySelector("#contactForm form");
+    const mensajeExito = document.getElementById("mensaje-exito");
 
-                <button type="submit">Enviar</button>
-            </form>
-            <p id="agradecimiento" class="oculto">¡Gracias por contactarnos! Te responderemos pronto.</p>
-        </section>
-    </main>
+    form.addEventListener("submit", function(event) {
+      event.preventDefault(); // Evita recargar la página
+      mensajeExito.style.display = "block"; // Muestra el mensaje
+      form.reset(); // Limpia los campos del formulario
+    });
+  </script>
 
-    <footer>
-        <p>&copy; 2025 FarmaVend - Cuida tu salud con nosotros</p>
-    </footer>
-
-    <!-- Script -->
-    <script>
-        // Cotizador
-        function calcular() {
-            const precio = parseFloat(document.getElementById("producto").value);
-            const cantidad = parseInt(document.getElementById("cantidad").value);
-            if (!cantidad || cantidad <= 0) {
-                document.getElementById("resultado").innerText = "Ingrese una cantidad válida.";
-                return;
-            }
-            const total = precio * cantidad;
-            document.getElementById("resultado").innerText = "Total estimado: S/" + total;
-        }
-
-        // Contacto
-        document.getElementById("contactForm").addEventListener("submit", function(e) {
-            e.preventDefault();
-            document.getElementById("agradecimiento").classList.remove("oculto");
-            this.reset();
-        });
-    </script>
+  <script>
+    // Validar email
+    document.getElementById("email").addEventListener("input", function () {
+      const email = this.value;
+      if (!email.includes("@") || !email.includes(".")) {
+        this.setCustomValidity("Por favor ingresa un correo válido.");
+      } else {
+        this.setCustomValidity("");
+      }
+    });
+  </script>
 </body>
 </html>
-

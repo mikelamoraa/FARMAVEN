@@ -1,118 +1,115 @@
-/* Estilos generales */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f7f7f7;
-    color: #333;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
 }
 
-header {
-    background-color: #4CAF50;
-    color: white;
-    padding: 15px;
-    text-align: center;
+/* Logo más pequeño */
+.navbar-brand img {
+  height: 45px;
+  width: auto;
 }
 
-nav a {
-    margin: 0 15px;
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
+/* Banner: texto legible */
+.banner h1 {
+  color: #0d3b66; /* azul oscuro */
+  text-shadow: 1px 1px 4px rgba(255,255,255,0.8);
 }
 
-nav a:hover {
-    text-decoration: underline;
+.banner p {
+  color: #003366; /* gris-azulado legible */
+  text-shadow: 1px 1px 3px rgba(255,255,255,0.7);
+}
+/* Banner: texto azul oscuro sólido */
+.banner h1 {
+  color: #0d3b66; /* azul oscuro */
 }
 
-main {
-    padding: 20px;
+.banner p {
+  color: #0d3b66; /* azul oscuro */
 }
 
-section {
-    margin-bottom: 40px;
+/* Forzar color azul oscuro en el banner */
+.banner h1,
+.banner p {
+  color: #0d3b66 !important; /* azul oscuro sólido */
+}
+/* ===== SECCIÓN NOSOTROS ===== */
+#nosotros {
+  background: linear-gradient(to right, #e6f0fa, #ffffff);
+  border-top: 4px solid #0d3b66;
+  border-bottom: 4px solid #0d3b66;
 }
 
-h2 {
-    color: #4CAF50;
-    margin-bottom: 15px;
+#nosotros h2 {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #0d3b66;
 }
 
-/* Productos */
-#productos {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
+#nosotros p.lead {
+  font-size: 1.2rem;
+  color: #333;
+  line-height: 1.6;
 }
 
-.producto {
-    background: white;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    padding: 15px;
-    text-align: center;
-    width: 200px;
+#nosotros ul {
+  list-style: none;
+  padding-left: 0;
 }
 
-.producto img {
-    width: 100%;
-    border-radius: 5px;
+#nosotros ul li {
+  background: #f1f8ff;
+  margin-bottom: 10px;
+  padding: 10px 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  font-size: 1rem;
 }
 
-.descuento {
-    color: red;
-    font-weight: bold;
+#nosotros ul li strong {
+  color: #0d3b66;
 }
 
-/* Formularios */
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    max-width: 400px;
-    margin: auto;
+#nosotros img {
+  border: 5px solid #0d3b66;
+  border-radius: 50%;
+  object-fit: cover;
+  max-height: 280px;
+  transition: transform 0.3s ease;
 }
 
-input, select, textarea, button {
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+#nosotros img:hover {
+  transform: scale(1.05);
+}
+#mensaje-exito {
+  background: #e6f9f0;
+  color: #0d684d;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+/* Fuente para los títulos principales */
+.section-title,
+h1, h2, h3 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  color: #0d3b66; /* azul oscuro consistente */
+}
+.destacada {
+  background: url("images/farmacia-familia.png") no-repeat center center/cover;
+  color: white;
+  padding: 60px 20px;
 }
 
-button {
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    cursor: pointer;
+.destacada h3 {
+  font-size: 2rem;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
 }
 
-button:hover {
-    background-color: #45a049;
-}
-
-#resultado {
-    margin-top: 15px;
-    font-weight: bold;
-    text-align: center;
-}
-
-/* Agradecimiento */
-#agradecimiento {
-    margin-top: 20px;
-    color: #4CAF50;
-    font-weight: bold;
-    text-align: center;
-}
-
-.oculto {
-    display: none;
-}
-
-/* Footer */
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 15px;
-    margin-top: 20px;
+.destacada p {
+  font-size: 1.2rem;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
 }
