@@ -11,7 +11,7 @@ function handleBrokenImg(img){
   img.onerror = null;
   img.src = svg;
   img.style.objectFit = 'contain';
-  console.warn("Imagen no encontrada. Sustituida por placeholder (comprueba ruta y nombre):", img.dataset && img.dataset.src ? img.dataset.src : img.src);
+  console.warn("Imagen no encontrada. Sustituida por placeholder:", img.dataset?.src || img.src);
 }
 
 // ---- Cotizador ----
@@ -49,25 +49,30 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
       }
       if(mensaje.length < 5){
-        showMessage("Escribe un mensaje más detallado (min 5 caracteres).");
+        showMessage("Escribe un mensaje más detallado (mínimo 5 caracteres).");
         return;
       }
 
       // Simulación de envío (puedes implementar fetch a tu backend)
-      document.getElementById('mensajeExito').textContent = `¡Gracias ${nombre}! Recibimos tu mensaje.`;
+      document.getElementById('mensaje-exito').textContent = `¡Gracias ${nombre}! Recibimos tu mensaje.`;
       contactForm.reset();
-      setTimeout(()=>{ document.getElementById('mensajeExito').textContent = ""; }, 6000);
+      setTimeout(()=>{ document.getElementById('mensaje-exito').textContent = ""; }, 6000);
     });
   }
 
   function showMessage(text){
-    const el = document.getElementById('mensajeExito');
-    if(el){ el.textContent = text; el.classList.remove('text-success'); el.classList.add('text-danger'); setTimeout(()=> el.textContent='',4000); }
+    const el = document.getElementById('mensaje-exito');
+    if(el){ 
+      el.textContent = text; 
+      el.classList.remove('text-success'); 
+      el.classList.add('text-danger'); 
+      setTimeout(()=> el.textContent='',4000); 
+    }
     else alert(text);
   }
 
-  // -- opcional: chequear imágenes rotas en consola (helpful)
+  // -- opcional: chequear imágenes rotas y reemplazarlas
   document.querySelectorAll('img').forEach(img=>{
-    img.addEventListener('error', ()=> console.warn('Imagen rota detectada:', img.src));
+    img.addEventListener('error', ()=> handleBrokenImg(img));
   });
 });
